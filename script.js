@@ -11,7 +11,7 @@ function initializeEventListener() {
   // Listen for key up
   fahrenheitInput.addEventListener("keyup", () => {
     // Pass current input value along for further processing
-    handleFahrenheitInput(fahrenheitInput.value);
+    handleFahrenheitInput(Number(fahrenheitInput.value));
   });
 }
 
@@ -23,7 +23,13 @@ function handleFahrenheitInput(fahrenheitValue) {
 
 // Update celsius output
 function updateOutput(newOutput) {
-  celsiusOutput.textContent = newOutput;
+  // Handle NaN results
+  if(isNaN(newOutput)){
+    celsiusOutput.textContent = "";
+  }else{
+    // Set output content to the provided output
+    celsiusOutput.textContent = newOutput;
+  }
 }
 // Convert fahrenheit value to celsius
 function fahrenheitToCelsius(fahrenheitValue) {
