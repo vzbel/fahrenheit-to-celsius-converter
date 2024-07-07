@@ -29,7 +29,7 @@ body{
 }
 
 /* Input and output containers */
-.fahrenheit-container .output-container{
+.fahrenheit-container, .output-container{
     /* Align text to center */
     text-align: center;
 }
