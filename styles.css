@@ -29,13 +29,13 @@ body{
 }
 
 /* Input and output containers */
-.fahrenheit-container, .output-container{
+.fahrenheit-container .output-container{
     /* Align text to center */
     text-align: center;
 }
 
 /* Fahrenheit input field*/
-.fahrenheit-input{
+#fahrenheit-input{
     width: 100%;
     height: 1.5rem;
 }
