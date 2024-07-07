@@ -41,7 +41,7 @@ body{
 
 /* Make certain items unselectable by the user */
 .unselectable{
-    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* Input and output containers */
