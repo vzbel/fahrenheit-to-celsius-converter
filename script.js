@@ -33,5 +33,13 @@ function updateOutput(newOutput) {
 }
 // Convert fahrenheit value to celsius
 function fahrenheitToCelsius(fahrenheitValue) {
-  return ((fahrenheitValue - 32) * 5) / 9;
+  // Calculate the result then round to decimal place 4.
+  return roundToDecimalPlace(4, ((fahrenheitValue - 32) * 5) / 9);
+}
+
+// Round a number to a fixed decimal place. This will return a number.
+function roundToDecimalPlace(decimalPlace, value){
+  // Note that toFixed returns a string.
+  // Thus, we must first round the value using toFixed, then convert the result to a number.
+  return Number(value.toFixed(decimalPlace));
 }
